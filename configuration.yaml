@@ -1,2 +1,2 @@
 zwave:
-  usb_path: /dev/ttyACM0
+  usb_path: /dev/ttyAMA0
