@@ -1,1 +1,20 @@
-
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 0
+  unit_system: imperial
+  time_zone: !secret timezone
+  customize: !include customize.yaml
+default_config:
+#introduction:
+#http:
+#  base_url: example.duckdns.org:8123
+discovery:
+sensor:
+  - platform: yr
+tts:
+  - platform: google
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
