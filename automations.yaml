@@ -1,1 +1,14 @@
-[]
+- id: bathroom-light-motion
+  alias: "Bathroom Light Motion"
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id:
+        - sensor.bathroom_motion
+      to: '8'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.vanity
+          - switch.bathroom
