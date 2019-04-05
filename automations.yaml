@@ -12,3 +12,24 @@
         entity_id:
           - switch.vanity
           - switch.bathroom
+ - id: bathroom-light-motion-stopped
+   alias: "Bathroom Light Motion Stopped"
+   initial_state: 'on'
+   trigger:
+     - platform: state
+       entity_id:
+         - sensor.bathroom_motion
+       to: '0'
+       for:
+         minutes: 3
+   condition:
+     - platform: state
+       entity_id:
+         - sensor.bathroom_humidity
+       below: 52.0
+   action:
+     - service: switch.turn_off
+       data:
+         entity_id:
+           - switch.vanity
+           - switch.bathroom
