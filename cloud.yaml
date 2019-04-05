@@ -1,0 +1,5 @@
+google_actions:
+  filter:
+    exclude_entities:
+      - remote.bedroom_tv
+      - remote.living_room_tv
