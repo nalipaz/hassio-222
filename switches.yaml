@@ -1,7 +1,14 @@
 - platform: command_line
   switches:
     bedroom_tv:
+      friendly_name: 'Bedroom TV'
       command_on: 'curl -X POST http://192.168.50.221:8060/keypress/PowerOn'
       command_off: 'curl -X POST http://192.168.50.221:8060/keypress/PowerOff'
       command_state: 'curl -s GET http://192.168.50.221:8060/query/device-info | grep power-mode | sed -e "s:<power-mode>DisplayOff</power-mode>:OFF:" -e "s:<power-mode>PowerOn</power-mode>:ON:"'
+      value_template: '{{ value == "ON" }}'
+    living_room_tv:
+      friendly_name: 'Living Room TV'
+      command_on: 'curl -X POST http://192.168.50.49:8060/keypress/PowerOn'
+      command_off: 'curl -X POST http://192.168.50.49:8060/keypress/PowerOff'
+      command_state: 'curl -s GET http://192.168.50.49:8060/query/device-info | grep power-mode | sed -e "s:<power-mode>DisplayOff</power-mode>:OFF:" -e "s:<power-mode>PowerOn</power-mode>:ON:"'
       value_template: '{{ value == "ON" }}'
