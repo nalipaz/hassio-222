@@ -11,8 +11,7 @@ default_config:
 #http:
 #  base_url: example.duckdns.org:8123
 discovery:
-sensor:
-  - platform: yr
+sensor: !include sensors.yaml
 tts:
   - platform: google
 group: !include groups.yaml
@@ -20,3 +19,4 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 switch: !include switches.yaml
 cloud: !include cloud.yaml
+history:
