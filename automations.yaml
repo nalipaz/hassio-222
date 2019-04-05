@@ -23,9 +23,8 @@
        for:
          minutes: 3
    condition:
-     - platform: state
-       entity_id:
-         - sensor.bathroom_humidity
+     - condition: state
+       entity_id: sensor.bathroom_humidity
        below: 52.0
    action:
      - service: switch.turn_off
