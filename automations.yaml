@@ -22,10 +22,6 @@
       to: '0'
       for:
         minutes: 3
-  condition:
-    - condition: state
-      entity_id: sensor.bathroom_humidity
-      below: 58
   action:
     - service: switch.turn_off
       data:
