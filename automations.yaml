@@ -25,7 +25,7 @@
   condition:
     - condition: state
       entity_id: sensor.bathroom_humidity
-      below: 52
+      below: 56
   action:
     - service: switch.turn_off
       data:
