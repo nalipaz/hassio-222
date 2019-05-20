@@ -1,3 +1,30 @@
+- id: bedroom-closet-opened
+  alias: "Bedroom Closet Opened"
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id:
+        - sensor.bedroom_closet_door
+      to: 'open'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.bedroom_closet_light
+- id: bedroom-closet-closed
+  alias: "Bedroom Closet Closed"
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id:
+        - sensor.bedroom_closet_door
+      to: 'closed'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.bedroom_closet_light
+
 - id: bathroom-light-motion
   alias: "Bathroom Light Motion"
   initial_state: 'on'
