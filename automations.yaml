@@ -23,7 +23,7 @@
     - platform: state
       entity_id:
         - sensor.bathroom_motion_detected
-      to: 'true'
+      to: true
   action:
     - data:
         entity_id:
@@ -38,7 +38,7 @@
     - platform: state
       entity_id:
         - sensor.bathroom_motion_detected
-      to: 'false'
+      to: false
       for: '00:05:00'
   action:
     - data:
