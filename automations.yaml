@@ -14,8 +14,7 @@
     - data:
         entity_id:
           - switch.bedroom_closet_light
-      service_template: >
-        switch.turn_{{ if (trigger.to_state.state == 'open') }}on{{ elif (trigger.to_state.state == 'closed') }}off{{ endif }}
+      service_template: "switch.turn_{{ if (trigger.to_state.state == 'open') }}on{{ elif (trigger.to_state.state == 'closed') }}off{{ endif }}"
 
 - id: bathroom-light-motion
   alias: "Bathroom Light Motion"
