@@ -1,4 +1,33 @@
+# Automatically created remotes that don't work.
 remote.bedroom_tv:
   hidden: true
 remote.living_room_tv:
+  hidden: true
+
+# Bathroom vanity sensors we don't want in UI.
+sensor.bathroom_vanity_light_alarm_type:
+  hidden: true
+sensor.bathroom_vanity_light_alarm_type_2:
+  hidden: true
+sensor.bathroom_vanity_light_alarm_level:
+  hidden: true
+sensor.bathroom_vanity_light_alarm_level_2:
+  hidden: true
+sensor.bathroom_vanity_light_sourcenodeid:
+  hidden: true
+sensor.bathroom_vanity_light_sourcenodeid_2:
+  hidden: true
+
+# Guest bathroom vanity sensors we don't want in UI.
+sensor.guest_bathroom_vanity_light_alarm_type:
+  hidden: true
+sensor.guest_bathroom_vanity_light_alarm_type_2:
+  hidden: true
+sensor.guest_bathroom_vanity_light_alarm_level:
+  hidden: true
+sensor.guest_bathroom_vanity_light_alarm_level_2:
+  hidden: true
+sensor.guest_bathroom_vanity_light_sourcenodeid:
+  hidden: true
+sensor.guest_bathroom_vanity_light_sourcenodeid_2:
   hidden: true
