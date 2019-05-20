@@ -22,13 +22,14 @@
   trigger:
     - platform: state
       entity_id:
-        - sensor.bathroom_motion_detected
+        - sensor.master_bathroom_motion_detected
+        - sensor.guest_bathroom_motion_detected
       to: 'yes'
   action:
-    - data:
+    - data_template:
         entity_id:
-          - switch.bathroom_vanity_light
-          - switch.bathroom_light
+          - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_vanity_light"
+          - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_light"
       service: switch.turn_on
 
 - id: bathroom-motion-stopped
@@ -37,12 +38,13 @@
   trigger:
     - platform: state
       entity_id:
-        - sensor.bathroom_motion_detected
+        - sensor.master_bathroom_motion_detected
+        - sensor.guest_bathroom_motion_detected
       to: 'no'
       for: '00:05:00'
   action:
-    - data:
+    - data_template:
         entity_id:
-          - switch.bathroom_vanity_light
-          - switch.bathroom_light
+          - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_vanity_light"
+          - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_light"
       service: switch.turn_off
