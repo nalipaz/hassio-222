@@ -24,8 +24,8 @@
         {% else %}
           mdi:alert
         {% endif %}
-    bathroom_motion_sensor:
-      friendly_name: "Bathroom motion sensor"
+    bathroom_motion_detected:
+      friendly_name: "Bathroom Motion Detected"
       value_template: >-
         {% if is_state('sensor.bathroom_vanity_light_sensor_state', '8') %}
           true
@@ -42,8 +42,8 @@
         {% else %}
           mdi:alert
         {% endif %}
-    guest_bathroom_motion_sensor:
-      friendly_name: "Bathroom motion sensor"
+    guest_bathroom_motion_detected:
+      friendly_name: "Bathroom Motion Detected"
       value_template: >-
         {% if is_state('sensor.guest_bathroom_vanity_light_sensor_state', '8') %}
           true
