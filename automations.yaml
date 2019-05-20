@@ -16,37 +16,33 @@
           - switch.bedroom_closet_light
       service_template: "switch.turn_{% if (trigger.to_state.state == 'open') %}on{% elif (trigger.to_state.state == 'closed') %}off{% endif %}"
 
-- id: bathroom-light-motion
-  alias: "Bathroom Light Motion"
+- id: bathroom-motion-detected
+  alias: "Bedroom Motion Detected"
   initial_state: 'on'
   trigger:
     - platform: state
       entity_id:
-        - sensor.bathroom_motion
-      to: '8'
+        - sensor.bathroom_motion_detected
+      to: 'true'
   action:
-    - service: switch.turn_on
-      data:
+    - data:
         entity_id:
-          - switch.vanity
-          - switch.bathroom
-- id: bathroom-light-motion-stopped
-  alias: "Bathroom Light Motion Stopped"
+          - switch.switch.bathroom_vanity_light
+          - switch.bathroom_light
+      service: switch.turn_on
+
+- id: bathroom-motion-stopped
+  alias: "Bedroom Motion Stopped"
   initial_state: 'on'
   trigger:
     - platform: state
       entity_id:
-        - sensor.bathroom_motion
-      to: '0'
-      for:
-        minutes: 3
-  condition:
-    - condition: numeric_state
-      entity_id: sensor.bathroom_humidity
-      below: 58
+        - sensor.bathroom_motion_detected
+      to: 'false'
+      for: '00:05:00'
   action:
-    - service: switch.turn_off
-      data:
+    - data:
         entity_id:
-          - switch.vanity
-          - switch.bathroom
+          - switch.switch.bathroom_vanity_light
+          - switch.bathroom_light
+      service: switch.turn_off
