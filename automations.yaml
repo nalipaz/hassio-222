@@ -17,7 +17,7 @@
       service_template: "switch.turn_{% if (trigger.to_state.state == 'open') %}on{% elif (trigger.to_state.state == 'closed') %}off{% endif %}"
 
 - id: bathroom-motion-detected
-  alias: "Bedroom Motion Detected"
+  alias: "Bathroom Motion Detected"
   initial_state: 'on'
   trigger:
     - platform: state
@@ -32,7 +32,7 @@
       service: switch.turn_on
 
 - id: bathroom-motion-stopped
-  alias: "Bedroom Motion Stopped"
+  alias: "Bathroom Motion Stopped"
   initial_state: 'on'
   trigger:
     - platform: state
