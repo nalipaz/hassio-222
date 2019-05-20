@@ -23,11 +23,11 @@
     - platform: state
       entity_id:
         - sensor.bathroom_motion_detected
-      to: 'true'
+      to: 'yes'
   action:
     - data:
         entity_id:
-          - switch.switch.bathroom_vanity_light
+          - switch.bathroom_vanity_light
           - switch.bathroom_light
       service: switch.turn_on
 
@@ -38,11 +38,11 @@
     - platform: state
       entity_id:
         - sensor.bathroom_motion_detected
-      to: 'false'
+      to: 'no'
       for: '00:05:00'
   action:
     - data:
         entity_id:
-          - switch.switch.bathroom_vanity_light
+          - switch.bathroom_vanity_light
           - switch.bathroom_light
       service: switch.turn_off
