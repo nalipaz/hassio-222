@@ -35,9 +35,9 @@
           null
         {% endif %}
       icon_template: >-
-        {% if is_state('sensor.bedroom_closet_sensor_state', '8') %}
+        {% if is_state('sensor.bathroom_vanity_light_sensor_state', '8') %}
           mdi:exit-run
-        {% elif is_state('sensor.bedroom_closet_sensor_state', '0') %}
+        {% elif is_state('sensor.bathroom_vanity_light_sensor_state', '0') %}
           mdi:door
         {% else %}
           mdi:alert
@@ -45,17 +45,17 @@
     guest_bathroom_motion_sensor:
       friendly_name: "Bathroom motion sensor"
       value_template: >-
-        {% if is_state('sensor.bathroom_vanity_light_sensor_state', '8') %}
+        {% if is_state('sensor.guest_bathroom_vanity_light_sensor_state', '8') %}
           true
-        {% elif is_state('sensor.bathroom_vanity_light_sensor_state', '0') %}
+        {% elif is_state('sensor.guest_bathroom_vanity_light_sensor_state', '0') %}
           false
         {% else %}
           null
         {% endif %}
       icon_template: >-
-        {% if is_state('sensor.bedroom_closet_sensor_state', '8') %}
+        {% if is_state('sensor.guest_bathroom_vanity_light_sensor_state', '8') %}
           mdi:exit-run
-        {% elif is_state('sensor.bedroom_closet_sensor_state', '0') %}
+        {% elif is_state('sensor.guest_bathroom_vanity_light_sensor_state', '0') %}
           mdi:door
         {% else %}
           mdi:alert
