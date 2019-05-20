@@ -11,11 +11,11 @@
         - sensor.bedroom_closet_door
       to: 'closed'
   action:
-    - service_template: >
-        switch.turn_{{ if (trigger.to_state.state == 'open') }}on{{ elif (trigger.to_state.state == 'closed') }}off{{ endif }}
-      data:
+    - data:
         entity_id:
           - switch.bedroom_closet_light
+      service_template: >
+        switch.turn_{{ if (trigger.to_state.state == 'open') }}on{{ elif (trigger.to_state.state == 'closed') }}off{{ endif }}
 
 - id: bathroom-light-motion
   alias: "Bathroom Light Motion"
