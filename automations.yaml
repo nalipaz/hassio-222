@@ -23,6 +23,9 @@
     - platform: state
       entity_id:
         - sensor.master_bathroom_motion_detected
+      to: 'yes'
+    - platform: state
+      entity_id:
         - sensor.guest_bathroom_motion_detected
       to: 'yes'
   action:
@@ -39,6 +42,10 @@
     - platform: state
       entity_id:
         - sensor.master_bathroom_motion_detected
+      to: 'no'
+      for: '00:05:00'
+    - platform: state
+      entity_id:
         - sensor.guest_bathroom_motion_detected
       to: 'no'
       for: '00:05:00'
