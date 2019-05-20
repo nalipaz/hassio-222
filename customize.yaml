@@ -13,6 +13,8 @@ sensor.bathroom_vanity_light_alarm_level:
   hidden: true
 sensor.bathroom_vanity_light_alarm_level_2:
   hidden: true
+sensor.bathroom_vanity_light_burglar:
+  hidden: true
 sensor.bathroom_vanity_light_sourcenodeid:
   hidden: true
 sensor.bathroom_vanity_light_sourcenodeid_2:
@@ -27,7 +29,17 @@ sensor.guest_bathroom_vanity_light_alarm_level:
   hidden: true
 sensor.guest_bathroom_vanity_light_alarm_level_2:
   hidden: true
+sensor.guest_bathroom_vanity_light_burglar:
+  hidden: true
 sensor.guest_bathroom_vanity_light_sourcenodeid:
   hidden: true
 sensor.guest_bathroom_vanity_light_sourcenodeid_2:
+  hidden: true
+
+# Bedroom closet door sensor sensors we don't want in UI:
+sensor.bedroom_closet_sensor_alarm_type:
+  hidden: true
+sensor.bedroom_closet_sensor_alarm_level:
+  hidden: true
+sensor.bedroom_closet_sensor_sourcenodeid:
   hidden: true
