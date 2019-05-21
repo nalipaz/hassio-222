@@ -3,34 +3,44 @@ tv_volume_up:
   sequence:
     - service: shell_command.roku_keypress
       data: 
-        key: "VolumeUp"
+        variables:
+          key: "VolumeUp"
     - service: shell_command.roku_keypress
       data: 
-        key: "VolumeUp"
+        variables:
+          key: "VolumeUp"
     - service: shell_command.roku_keypress
       data: 
-        key: "VolumeUp"
+        variables:
+          key: "VolumeUp"
     - service: shell_command.roku_keypress
       data: 
-        key: "VolumeUp"
+        variables:
+          key: "VolumeUp"
     - service: shell_command.roku_keypress
       data: 
-        key: "VolumeUp"
+        variables:
+          key: "VolumeUp"
 tv_volume_down:
   alias: "Living room tv volume down"
   sequence:
     - service: shell_command.roku_keypress
       data: 
-        key: "VolumeDown"
+        variables:
+          key: "VolumeDown"
     - service: shell_command.roku_keypress
       data: 
-        key: "VolumeDown"
+        variables:
+          key: "VolumeDown"
     - service: shell_command.roku_keypress
       data: 
-        key: "VolumeDown"
+        variables:
+          key: "VolumeDown"
     - service: shell_command.roku_keypress
       data: 
-        key: "VolumeDown"
+        variables:
+          key: "VolumeDown"
     - service: shell_command.roku_keypress
       data: 
-        key: "VolumeDown"
+        variables:
+          key: "VolumeDown"
