@@ -15,6 +15,8 @@ sensor.master_bathroom_vanity_light_alarm_level_2:
   hidden: true
 sensor.master_bathroom_vanity_light_burglar:
   hidden: true
+sensor.master_bathroom_vanity_light_sensor_state:
+  hidden: true
 sensor.master_bathroom_vanity_light_sourcenodeid:
   hidden: true
 sensor.master_bathroom_vanity_light_sourcenodeid_2:
@@ -31,6 +33,8 @@ sensor.guest_bathroom_vanity_light_alarm_level_2:
   hidden: true
 sensor.guest_bathroom_vanity_light_burglar:
   hidden: true
+sensor.guest_bathroom_vanity_light_sensor_state:
+  hidden: true
 sensor.guest_bathroom_vanity_light_sourcenodeid:
   hidden: true
 sensor.guest_bathroom_vanity_light_sourcenodeid_2:
@@ -41,5 +45,11 @@ sensor.bedroom_closet_sensor_alarm_type:
   hidden: true
 sensor.bedroom_closet_sensor_alarm_level:
   hidden: true
+binary_sensor.bedroom_closet_sensor_availability:
+  hidden: true
+sensor.bedroom_closet_sensor_burglar:
+  hidden: true
 sensor.bedroom_closet_sensor_sourcenodeid:
+  hidden: true
+sensor.bedroom_closet_sensor_state:
   hidden: true
