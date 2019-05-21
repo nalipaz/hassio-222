@@ -1,13 +1,26 @@
-  device_config:
-    light.ge_14294_inwall_smart_dimmer_level: 
-      polling_intensity: 1
-      refresh_value: 2
-      delay: 3
-    light.ge_14294_inwall_smart_dimmer_level_2:
-      polling_intensity: 1
-      refresh_value: 2
-      delay: 3
-    light.ge_14294_inwall_smart_dimmer_level_3:
-      polling_intensity: 1
-      refresh_value: 2
-      delay: 3
+polling_interval: 10000
+device_config:
+  light.living_lamp: 
+    polling_intensity: 1
+    refresh_value: 2
+    delay: 3
+  light.kitchen: 
+    polling_intensity: 1
+    refresh_value: 2
+    delay: 3
+  light.dining_room_light: 
+    polling_intensity: 1
+    refresh_value: 2
+    delay: 3
+  light.bedroom_lamp: 
+    polling_intensity: 1
+    refresh_value: 2
+    delay: 3
+  light.breakfast_counter_lights: 
+    polling_intensity: 1
+    refresh_value: 2
+    delay: 3
+  light.bedroom_light: 
+    polling_intensity: 1
+    refresh_value: 2
+    delay: 3
