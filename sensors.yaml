@@ -1,9 +1,9 @@
-- platform: statistics
-  entity_id: sensor.bathroom_humidity
-  name: Bathroom Humidity
-  sampling_size: 400
-  max_age:
-    minutes: 300
+# - platform: statistics
+#   entity_id: sensor.bathroom_humidity
+#   name: Bathroom Humidity
+#   sampling_size: 400
+#   max_age:
+#     minutes: 300
 - platform: template
   sensors:
     bedroom_closet_door:
