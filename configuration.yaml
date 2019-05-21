@@ -22,3 +22,4 @@ switch: !include switches.yaml
 cloud: !include cloud.yaml
 history:
 zwave: !include zwave.yaml
+shell_command: !include shell_commands.yaml
