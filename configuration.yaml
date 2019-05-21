@@ -13,7 +13,8 @@ default_config:
 discovery:
 sensor: !include sensors.yaml
 tts:
-  - platform: google
+  - platform: google_translate
+    service_name: google_say
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
