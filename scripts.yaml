@@ -1,5 +1,5 @@
-- turn_on_tv:
-    sequence:
-      - service: switch.turn_on
-        data: 
-          entity_id: switch.living_room_tv
+turn_on_tv:
+  sequence:
+    - service: switch.turn_on
+      data: 
+        entity_id: switch.living_room_tv
