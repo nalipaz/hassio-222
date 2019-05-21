@@ -1,5 +1,36 @@
-turn_on_tv:
+tv_volume_up:
+  alias: "Living room tv volume up"
   sequence:
-    - service: switch.turn_on
+    - service: shell_command.roku_keypress
       data: 
-        entity_id: switch.living_room_tv
+        key: "VolumeUp"
+    - service: shell_command.roku_keypress
+      data: 
+        key: "VolumeUp"
+    - service: shell_command.roku_keypress
+      data: 
+        key: "VolumeUp"
+    - service: shell_command.roku_keypress
+      data: 
+        key: "VolumeUp"
+    - service: shell_command.roku_keypress
+      data: 
+        key: "VolumeUp"
+tv_volume_down:
+  alias: "Living room tv volume down"
+  sequence:
+    - service: shell_command.roku_keypress
+      data: 
+        key: "VolumeDown"
+    - service: shell_command.roku_keypress
+      data: 
+        key: "VolumeDown"
+    - service: shell_command.roku_keypress
+      data: 
+        key: "VolumeDown"
+    - service: shell_command.roku_keypress
+      data: 
+        key: "VolumeDown"
+    - service: shell_command.roku_keypress
+      data: 
+        key: "VolumeDown"
