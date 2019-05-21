@@ -53,3 +53,4 @@ sensor.bedroom_closet_sensor_sourcenodeid:
   hidden: true
 sensor.bedroom_closet_sensor_state:
   hidden: true
+
