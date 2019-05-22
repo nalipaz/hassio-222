@@ -4,13 +4,13 @@ tv_keypress:
       data_template:
         key: '{{ key }}'
         ip: >-
-          {% if (switch.living_room_tv.state == 'on' and switch.bedroom_tv.state == 'off') %}
+          {% if (states('switch.living_room_tv') == 'on' and states('switch.bedroom_tv') == 'off') %}
             {{ sensor.living_room_tv_ip.state }}
-          {% elif (switch.bedroom_tv.state == 'on' and switch.living_room_tv.state == 'off') %}
+          {% elif (states('switch.bedroom_tv') == 'on' and states('switch.living_room_tv') == 'off') %}
             {{ sensor.bedroom_tv_ip.state }}
-          {% elif (media_player.living_room_tv.state == 'playing' and media_player.bedroom_tv.state != 'playing') %}
+          {% elif (states('media_player.living_room_tv') == 'playing' and states('media_player.bedroom_tv') != 'playing') %}
             {{ sensor.living_room_tv_ip.state }}
-          {% elif (media_player.bedroom_tv.state == 'playing' and media_player.living_room_tv.state != 'playing') %}
+          {% elif (states('media_player.bedroom_tv') == 'playing' and states('media_player.living_room_tv') != 'playing') %}
             {{ sensor.living_room_tv_ip.state }}
           {% else %}
             {{ sensor.living_room_tv_ip.state }}
