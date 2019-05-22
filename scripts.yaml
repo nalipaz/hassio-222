@@ -1,45 +1,53 @@
+tv_keypress:
+  sequence:
+    - service: shell_command.roku_keypress
+      data_template:
+        key: {{ key }}
+        ip: >-
+          {% if (switch.living_room_tv.state == 'on' and switch.bedroom_tv.state == 'off') %}
+            {{ sensor.living_room_tv_ip.state }}
+          {% elif (switch.bedroom_tv.state == 'on' and switch.living_room_tv.state == 'off') %}
+            {{ sensor.bedroom_tv_ip.state }}
+          {% elif (media_player.living_room_tv.state == 'playing' and media_player.bedroom_tv.state != 'playing') %}
+            {{ sensor.living_room_tv_ip.state }}
+          {% elif (media_player.bedroom_tv.state == 'playing' and media_player.living_room_tv.state != 'playing') %}
+            {{ sensor.living_room_tv_ip.state }}
+          {% else %}
+            {{ sensor.living_room_tv_ip.state }}
+          {% endif %}
 tv_volume_up:
   alias: "Living room tv volume up"
   sequence:
-    - service: shell_command.roku_keypress
+    - service: script.tv_keypress
       data_template:
         key: "VolumeUp"
-        ip: 217
-    - service: shell_command.roku_keypress
+    - service: script.tv_keypress
       data_template:
         key: "VolumeUp"
-        ip: 217
-    - service: shell_command.roku_keypress
+    - service: script.tv_keypress
       data_template:
         key: "VolumeUp"
-        ip: 217
-    - service: shell_command.roku_keypress
+    - service: script.tv_keypress
       data_template:
         key: "VolumeUp"
-        ip: 217
-    - service: shell_command.roku_keypress
+    - service: script.tv_keypress
       data_template:
         key: "VolumeUp"
-        ip: 217
 tv_volume_down:
   alias: "Living room tv volume down"
   sequence:
-    - service: shell_command.roku_keypress
-      data_template: 
+    - service: script.tv_keypress
+      data_template:
         key: "VolumeDown"
-        ip: 217
-    - service: shell_command.roku_keypress
-      data_template: 
+    - service: script.tv_keypress
+      data_template:
         key: "VolumeDown"
-        ip: 217
-    - service: shell_command.roku_keypress
-      data_template: 
+    - service: script.tv_keypress
+      data_template:
         key: "VolumeDown"
-        ip: 217
-    - service: shell_command.roku_keypress
-      data_template: 
+    - service: script.tv_keypress
+      data_template:
         key: "VolumeDown"
-    - service: shell_command.roku_keypress
-      data_template: 
+    - service: script.tv_keypress
+      data_template:
         key: "VolumeDown"
-        ip: 217
