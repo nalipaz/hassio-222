@@ -4,33 +4,42 @@ tv_volume_up:
     - service: shell_command.roku_keypress
       data_template:
         key: "VolumeUp"
+        ip: 217
     - service: shell_command.roku_keypress
       data_template:
         key: "VolumeUp"
+        ip: 217
     - service: shell_command.roku_keypress
       data_template:
         key: "VolumeUp"
+        ip: 217
     - service: shell_command.roku_keypress
       data_template:
         key: "VolumeUp"
+        ip: 217
     - service: shell_command.roku_keypress
       data_template:
         key: "VolumeUp"
+        ip: 217
 tv_volume_down:
   alias: "Living room tv volume down"
   sequence:
     - service: shell_command.roku_keypress
       data_template: 
         key: "VolumeDown"
+        ip: 217
+    - service: shell_command.roku_keypress
+      data_template: 
+        key: "VolumeDown"
+        ip: 217
+    - service: shell_command.roku_keypress
+      data_template: 
+        key: "VolumeDown"
+        ip: 217
     - service: shell_command.roku_keypress
       data_template: 
         key: "VolumeDown"
     - service: shell_command.roku_keypress
       data_template: 
         key: "VolumeDown"
-    - service: shell_command.roku_keypress
-      data_template: 
-        key: "VolumeDown"
-    - service: shell_command.roku_keypress
-      data_template: 
-        key: "VolumeDown"
+        ip: 217
