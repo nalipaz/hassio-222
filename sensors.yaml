@@ -60,3 +60,7 @@
         {% else %}
           mdi:alert
         {% endif %}
+    living_room_tv_ip:
+      value_template: !secret living_room_tv_ip
+    bedroom_tv_ip:
+      value_template: !secret bedroom_tv_ip
