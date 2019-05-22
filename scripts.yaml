@@ -2,7 +2,7 @@ tv_keypress:
   sequence:
     - service: shell_command.roku_keypress
       data_template:
-        key: {{ key }}
+        key: '{{ key }}'
         ip: >-
           {% if (switch.living_room_tv.state == 'on' and switch.bedroom_tv.state == 'off') %}
             {{ sensor.living_room_tv_ip.state }}
