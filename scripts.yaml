@@ -5,15 +5,15 @@ tv_keypress:
         key: '{{ key }}'
         ip: >-
           {% if (states('switch.living_room_tv') == 'on' and states('switch.bedroom_tv') == 'off') %}
-            {{ sensor.living_room_tv_ip.state }}
+            {{ states('sensor.living_room_tv_ip') }}
           {% elif (states('switch.bedroom_tv') == 'on' and states('switch.living_room_tv') == 'off') %}
-            {{ sensor.bedroom_tv_ip.state }}
+            {{ states('sensor.bedroom_tv_ip') }}
           {% elif (states('media_player.living_room_tv') == 'playing' and states('media_player.bedroom_tv') != 'playing') %}
-            {{ sensor.living_room_tv_ip.state }}
+            {{ states('sensor.living_room_tv_ip') }}
           {% elif (states('media_player.bedroom_tv') == 'playing' and states('media_player.living_room_tv') != 'playing') %}
-            {{ sensor.living_room_tv_ip.state }}
+            {{ states('sensor.living_room_tv_ip') }}
           {% else %}
-            {{ sensor.living_room_tv_ip.state }}
+            {{ states('sensor.living_room_tv_ip') }}
           {% endif %}
 tv_volume_up:
   alias: "Living room tv volume up"
