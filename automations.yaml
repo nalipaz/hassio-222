@@ -55,3 +55,24 @@
           - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_vanity_light"
           - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_light"
       service: switch.turn_off
+
+- id: bathroom-switch-off
+  alias: "Bathroom Switch Off"
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id:
+        - switch.guest_bathroom_light
+        - switch.guest_bathroom_vanity_light_switch
+      to: 'off'
+    - platform: state
+      entity_id:
+        - switch.master_bathroom_light
+        - switch.master_bathroom_vanity_light_switch
+      to: 'off'
+  action:
+    - data_template:
+        entity_id:
+          - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_light"
+          - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_vanity_light"
+      service: switch.turn_off
