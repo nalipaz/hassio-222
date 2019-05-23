@@ -1,1 +1,2 @@
 roku_keypress: 'curl -X POST http://{{ ip }}:8060/keypress/{{ key }}'
+roku_power_state: 'curl -s GET http://{{ ip }}:8060/query/device-info | grep power-mode | sed -e "s:<power-mode>DisplayOff</power-mode>:off:" -e "s:<power-mode>PowerOn</power-mode>:on:"'
