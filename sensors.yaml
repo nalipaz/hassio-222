@@ -67,3 +67,6 @@
 - platform: command_line
   name: Living room tv state
   command: curl "-s GET http://{{ states.sensor.living_room_tv_ip.state }}:8060/query/device-info | grep power-mode | sed -e 's:<power-mode>DisplayOff</power-mode>:off:' -e 's:<power-mode>PowerOn</power-mode>:on:'"
+- platform: command_line
+  name: Bedroom tv state
+  command: curl "-s GET http://{{ states.sensor.bedroom_tv_ip.state }}:8060/query/device-info | grep power-mode | sed -e 's:<power-mode>DisplayOff</power-mode>:off:' -e 's:<power-mode>PowerOn</power-mode>:on:'"
