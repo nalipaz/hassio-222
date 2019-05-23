@@ -17,8 +17,13 @@ tv_keypress:
           {% else %}
             {{ states('sensor.living_room_tv_ip') }}
           {% endif %}
+tv_power_state:
+  sequence:
+    - service: shell_command.roku_power_state
+      data_template:
+        ip: '{{ ip }}'
 tv_volume_up:
-  alias: "Living room tv volume up"
+  alias: "TV volume up"
   sequence:
     - service: script.tv_keypress
       data_template:
@@ -36,7 +41,7 @@ tv_volume_up:
       data_template:
         key: "VolumeUp"
 tv_volume_down:
-  alias: "Living room tv volume down"
+  alias: "TV volume down"
   sequence:
     - service: script.tv_keypress
       data_template:
@@ -53,8 +58,3 @@ tv_volume_down:
     - service: script.tv_keypress
       data_template:
         key: "VolumeDown"
-tv_power_state:
-  sequence:
-    - service: shell_command.roku_power_state
-      data_template:
-        ip: '{{ ip }}'
