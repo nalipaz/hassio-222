@@ -5,3 +5,10 @@ google_actions:
       - media_player.living_room_tv
       - switch.bathroom_vanity_light_switch
       - switch.guest_bathroom_vanity_light_switch
+      - script.tv_keypress
+      - script.tv_power_state
+      - group.all_automations
+      - group.all_remotes
+      - group.all_scripts
+      - group.all_lights
+      - group.all_switches
