@@ -54,3 +54,8 @@ sensor.bedroom_closet_sensor_sourcenodeid:
 sensor.bedroom_closet_sensor_state:
   hidden: true
 
+# Hide some scripts that are only used for processing arguments and passing to commands.
+script.tv_keypress:
+  hidden: true
+script.tv_power_state:
+  hidden: true
