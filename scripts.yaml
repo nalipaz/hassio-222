@@ -53,3 +53,8 @@ tv_volume_down:
     - service: script.tv_keypress
       data_template:
         key: "VolumeDown"
+  tv_power_state:
+    sequence:
+      - service: shell_command.roku_power_state
+        data_template:
+          ip: '{{ ip }}'
