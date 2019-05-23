@@ -59,3 +59,17 @@ script.tv_keypress:
   hidden: true
 script.tv_power_state:
   hidden: true
+
+# Hide some sensors that are basically used to store variables and calculated states of other devices.
+sensor.living_room_tv_ip:
+  hidden: true
+sensor.living_room_tv_state:
+  hidden: true
+sensor.bedroom_tv_ip:
+  hidden: true
+sensor.bedroom_tv_state:
+  hidden: true
+sensor.master_bathroom_motion_detected:
+  hidden: true
+sensor.guest_bathroom_motion_detected:
+  hidden: true
