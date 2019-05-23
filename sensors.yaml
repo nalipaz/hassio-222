@@ -64,3 +64,6 @@
       value_template: !secret living_room_tv_ip
     bedroom_tv_ip:
       value_template: !secret bedroom_tv_ip
+- platform: command_line
+  name: Living room tv state
+  command: 'curl -s GET http://{{ states('sensor.living_room_tv_ip') }}:8060/query/device-info | grep power-mode | sed -e "s:<power-mode>DisplayOff</power-mode>:off:" -e "s:<power-mode>PowerOn</power-mode>:on:"'
