@@ -15,7 +15,7 @@
 - platform: template
   switches:
     bedroom_tv:
-      value_template: '{{ states('sensor.bedroom_tv_state') }}'
+      value_template: '{{ states("sensor.bedroom_tv_state") }}'
       turn_on:
         service: script.tv_keypress
         data_template:
@@ -27,7 +27,7 @@
           key: "PowerOff"
           ip: '{{ states("sensor.bedroom_tv_ip") }}'
     living_room_tv:
-      value_template: '{{ states('sensor.living_room_tv_state') }}'
+      value_template: '{{ states("sensor.living_room_tv_state") }}'
       turn_on:
         service: script.tv_keypress
         data_template:
