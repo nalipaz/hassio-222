@@ -11,3 +11,4 @@ OZW_Log.txt
 plex.conf
 *.sqlite
 secrets.yaml
+core.*
