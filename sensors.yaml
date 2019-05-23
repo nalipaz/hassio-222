@@ -68,7 +68,9 @@
   name: Living room tv state
   scan_interval: 20
   command: curl "-s GET http://{{ states.sensor.living_room_tv_ip.state }}:8060/query/device-info | grep power-mode | sed -e 's:<power-mode>DisplayOff</power-mode>:off:' -e 's:<power-mode>PowerOn</power-mode>:on:'"
+  value_template: '{{ value == "on" }}'
 - platform: command_line
   name: Bedroom tv state
   scan_interval: 20
   command: curl "-s GET http://{{ states.sensor.bedroom_tv_ip.state }}:8060/query/device-info | grep power-mode | sed -e 's:<power-mode>DisplayOff</power-mode>:off:' -e 's:<power-mode>PowerOn</power-mode>:on:'"
+  value_template: '{{ value == "on" }}'
