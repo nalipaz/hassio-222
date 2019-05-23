@@ -26,7 +26,6 @@
         data_template:
           key: "PowerOff"
           ip: '{{ states("sensor.bedroom_tv_ip") }}'
-
 - platform: template
   switches:
     living_room_tv:
