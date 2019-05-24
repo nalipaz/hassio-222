@@ -12,6 +12,9 @@ google_actions:
       - group.all_scripts
       - group.all_lights
       - group.all_switches
+    include_entities:
+      - script.tv_volume_down
+      - script.tv_volume_up
     include_domains:
       - switch
       - light
