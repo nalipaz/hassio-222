@@ -4,7 +4,7 @@ remote.bedroom_tv:
 remote.living_room_tv:
   hidden: true
 
-# Bathroom vanity sensors we don't want in UI.
+# Bathroom vanity stuff we don't want in UI.
 sensor.master_bathroom_vanity_light_alarm_type:
   hidden: true
 sensor.master_bathroom_vanity_light_alarm_type_2:
@@ -21,8 +21,10 @@ sensor.master_bathroom_vanity_light_sourcenodeid:
   hidden: true
 sensor.master_bathroom_vanity_light_sourcenodeid_2:
   hidden: true
+switch.master_bathroom_vanity_light_switch:
+  hidden: true
 
-# Guest bathroom vanity sensors we don't want in UI.
+# Guest bathroom vanity stuff we don't want in UI.
 sensor.guest_bathroom_vanity_light_alarm_type:
   hidden: true
 sensor.guest_bathroom_vanity_light_alarm_type_2:
@@ -38,6 +40,8 @@ sensor.guest_bathroom_vanity_light_sensor_state:
 sensor.guest_bathroom_vanity_light_sourcenodeid:
   hidden: true
 sensor.guest_bathroom_vanity_light_sourcenodeid_2:
+  hidden: true
+switch.guest_bathroom_vanity_light_switch:
   hidden: true
 
 # Bedroom closet door sensor sensors we don't want in UI:
