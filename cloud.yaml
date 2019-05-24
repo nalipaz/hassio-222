@@ -12,3 +12,8 @@ google_actions:
       - group.all_scripts
       - group.all_lights
       - group.all_switches
+    include_domains:
+      - switch
+      - light
+      - script
+      - group
