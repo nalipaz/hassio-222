@@ -12,5 +12,3 @@ google_actions:
       - group.all_scripts
       - group.all_lights
       - group.all_switches
-    exclude_domains:
-      - fan
