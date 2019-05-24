@@ -1,0 +1,19 @@
+all_lights_inclusive:
+  view: false
+  name: All Lights
+  entities:
+    - switch.foyer
+    - switch.office_closet_light
+    - switch.laundry_light
+    - switch.bedroom_closet_light
+    - switch.guest_bathroom_light
+    - switch.master_bathroom_light
+    - light.living_lamp
+    - light.office
+    - light.dining_room_light
+    - light.bedroom_lamp
+    - light.breakfast_counter_lights
+    - light.bedroom_light
+    - switch.master_bathroom_vanity_light
+    - switch.guest_bathroom_vanity_light
+    - switch.kitchen_light
