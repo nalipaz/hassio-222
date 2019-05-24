@@ -17,3 +17,9 @@ all_lights_inclusive:
     - switch.master_bathroom_vanity_light
     - switch.guest_bathroom_vanity_light
     - switch.kitchen_light
+televisions:
+  view: false
+  name: Televisions
+  entities:
+    - switch.living_room_tv
+    - switch.bedroom_tv
