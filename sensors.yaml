@@ -64,6 +64,20 @@
       value_template: !secret living_room_tv_ip
     bedroom_tv_ip:
       value_template: !secret bedroom_tv_ip
+    controlled_tv_mp:
+      friendly_name: "Controlled TV"
+      value_template: >-
+        {% if (states('switch.living_room_tv') == 'on' and states('switch.bedroom_tv') == 'off') %}
+          media_player.living_room_tv
+        {% elif (states('switch.bedroom_tv') == 'on' and states('switch.living_room_tv') == 'off') %}
+          media_player.bedroom_tv
+        {% elif (states('media_player.living_room_tv') == 'playing' and states('media_player.bedroom_tv') != 'playing') %}
+          media_player.living_room_tv
+        {% elif (states('media_player.bedroom_tv') == 'playing' and states('media_player.living_room_tv') != 'playing') %}
+          media_player.bedroom_tv
+        {% else %}
+          media_player.living_room_tv
+        {% endif %}
 - platform: command_line
   name: Living room tv state
   scan_interval: 20
