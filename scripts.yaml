@@ -28,7 +28,7 @@ tv_power_state:
       data_template:
         ip: '{{ ip }}'
 tv_volume_up:
-  alias: "TV volume up"
+  alias: "Press volume up"
   sequence:
     - service: script.tv_keypress
       data_template:
@@ -46,7 +46,7 @@ tv_volume_up:
       data_template:
         key: "VolumeUp"
 tv_volume_down:
-  alias: "TV volume down"
+  alias: "Press volume down"
   sequence:
     - service: script.tv_keypress
       data_template:
@@ -64,97 +64,97 @@ tv_volume_down:
       data_template:
         key: "VolumeDown"
 tv_mute:
-  alias: "Mute"
+  alias: "Press Mute"
   sequence:
     - service: script.tv_keypress
       data_template:
         key: "VolumeMute"
 tv_home:
-  alias: "Home"
+  alias: "Press Home"
   sequence:
     - service: script.tv_keypress
       data_template:
         key: "Home"
 tv_select:
-  alias: "Select"
+  alias: "Press Select"
   sequence:
     - service: script.tv_keypress
       data_template:
         key: "Select"
 tv_enter:
-  alias: "Enter"
+  alias: "Press Enter"
   sequence:
     - service: script.tv_keypress
       data_template:
         key: "Enter"
 tv_info:
-  alias: "Info"
+  alias: "Press Info"
   sequence:
     - service: script.tv_keypress
       data_template:
         key: "Info"
 tv_search:
-  alias: "Search"
+  alias: "Press Search"
   sequence:
     - service: script.tv_keypress
       data_template:
         key: "Search"
 tv_play:
-  alias: "Play"
+  alias: "Press Play"
   sequence:
     - service: script.tv_keypress
       data_template:
         key: "Play"
 tv_left:
-  alias: "Left"
+  alias: "Press Left"
   sequence:
     - service: script.tv_keypress
       data_template:
         key: "Left"
 tv_right:
-  alias: "Right"
+  alias: "Press Right"
   sequence:
     - service: script.tv_keypress
       data_template:
         key: "Right"
 tv_up:
-  alias: "Up"
+  alias: "Press Up"
   sequence:
     - service: script.tv_keypress
       data_template:
         key: "Up"
 tv_down:
-  alias: "Down"
+  alias: "Press Down"
   sequence:
     - service: script.tv_keypress
       data_template:
         key: "Down"
 tv_back:
-  alias: "Back"
+  alias: "Press Back"
   sequence:
     - service: script.tv_keypress
       data_template:
         key: "Back"
 tv_backspace:
-  alias: "Backspace"
+  alias: "Press Backspace"
   sequence:
     - service: script.tv_keypress
       data_template:
         key: "Backspace"
 tv_channelup:
-  alias: "Channel Up"
+  alias: "Press Channel Up"
   sequence:
     - service: script.tv_keypress
       data_template:
         key: "ChannelUp"
 tv_channel_down:
-  alias: "Channel Down"
+  alias: "Press Channel Down"
   sequence:
     - service: script.tv_keypress
       data_template:
         key: "ChannelDown"
 tv_input_tuner:
-  alias: "Input Tunner"
+  alias: "Input Tuner"
   sequence:
     - service: script.tv_keypress
       data_template:
@@ -419,3 +419,27 @@ tv_open_netflix:
         entity_id: >-
           {{ states('sensor.controlled_tv_mp') }}
         source: "Netflix"
+tv_open_plex:
+  alias: "Open Plex"
+  sequence:
+    - service: media_player.select_source
+      data_template:
+        entity_id: >-
+          {{ states('sensor.controlled_tv_mp') }}
+        source: "Plex"
+tv_open_prime:
+  alias: "Open Prime"
+  sequence:
+    - service: media_player.select_source
+      data_template:
+        entity_id: >-
+          {{ states('sensor.controlled_tv_mp') }}
+        source: "Prime Video"
+tv_open_youtube:
+  alias: "Open YouTube"
+  sequence:
+    - service: media_player.select_source
+      data_template:
+        entity_id: >-
+          {{ states('sensor.controlled_tv_mp') }}
+        source: "YouTube"
