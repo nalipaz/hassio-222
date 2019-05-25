@@ -11,12 +11,17 @@ tv_keypress:
           {% elif (states('switch.bedroom_tv') == 'on' and states('switch.living_room_tv') == 'off') %}
             {{ states('sensor.bedroom_tv_ip') }}
           {% elif (states('media_player.living_room_tv') == 'playing' and states('media_player.bedroom_tv') != 'playing') %}
-            {{ states('sensor.living_room_tv_ip') }}
+            {{ states('sensor.bedroom_tv_ip') }}
           {% elif (states('media_player.bedroom_tv') == 'playing' and states('media_player.living_room_tv') != 'playing') %}
             {{ states('sensor.living_room_tv_ip') }}
           {% else %}
             {{ states('sensor.living_room_tv_ip') }}
           {% endif %}
+tv_character_keypress:
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: 'Lit_{{ character }}'
 tv_power_state:
   sequence:
     - service: shell_command.roku_power_state
@@ -58,3 +63,359 @@ tv_volume_down:
     - service: script.tv_keypress
       data_template:
         key: "VolumeDown"
+tv_mute:
+  alias: "Mute"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "VolumeMute"
+tv_home:
+  alias: "Home"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "Home"
+tv_select:
+  alias: "Select"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "Select"
+tv_enter:
+  alias: "Enter"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "Enter"
+tv_info:
+  alias: "Info"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "Info"
+tv_search:
+  alias: "Search"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "Search"
+tv_play:
+  alias: "Play"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "Play"
+tv_left:
+  alias: "Left"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "Left"
+tv_right:
+  alias: "Right"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "Right"
+tv_up:
+  alias: "Up"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "Up"
+tv_down:
+  alias: "Down"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "Down"
+tv_back:
+  alias: "Back"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "Back"
+tv_backspace:
+  alias: "Backspace"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "Backspace"
+tv_channelup:
+  alias: "Channel Up"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "ChannelUp"
+tv_channel_down:
+  alias: "Channel Down"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "ChannelDown"
+tv_input_tuner:
+  alias: "Input Tunner"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "InputTuner"
+tv_input_hdmi1:
+  alias: "Input HDMI1"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "InputHDMI1"
+tv_input_hdmi2:
+  alias: "Input HDMI2"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "InputHDMI2"
+tv_input_hdmi3:
+  alias: "Input HDMI3"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "InputHDMI3"
+tv_input_hdmi4:
+  alias: "Input HDMI4"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "InputHDMI4"
+tv_input_av1:
+  alias: "Input AV1"
+  sequence:
+    - service: script.tv_keypress
+      data_template:
+        key: "InputAV1"
+tv_key_a:
+  alias: "Press A"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "A"
+tv_key_b:
+  alias: "Press B"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "B"
+tv_key_c:
+  alias: "Press C"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "C"
+tv_key_d:
+  alias: "Press D"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "D"
+tv_key_e:
+  alias: "Press E"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "E"
+tv_key_f:
+  alias: "Press F"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "F"
+tv_key_g:
+  alias: "Press G"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "G"
+tv_key_h:
+  alias: "Press H"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "H"
+tv_key_i:
+  alias: "Press I"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "I"
+tv_key_j:
+  alias: "Press J"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "J"
+tv_key_k:
+  alias: "Press K"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "K"
+tv_key_l:
+  alias: "Press L"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "L"
+tv_key_m:
+  alias: "Press M"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "M"
+tv_key_n:
+  alias: "Press N"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "N"
+tv_key_o:
+  alias: "Press O"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "O"
+tv_key_p:
+  alias: "Press P"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "P"
+tv_key_q:
+  alias: "Press Q"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "Q"
+tv_key_r:
+  alias: "Press R"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "R"
+tv_key_s:
+  alias: "Press S"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "S"
+tv_key_t:
+  alias: "Press T"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "T"
+tv_key_u:
+  alias: "Press U"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "U"
+tv_key_v:
+  alias: "Press V"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "V"
+tv_key_w:
+  alias: "Press W"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "W"
+tv_key_x:
+  alias: "Press X"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "X"
+tv_key_y:
+  alias: "Press Y"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "Y"
+tv_key_z:
+  alias: "Press Z"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "Z"
+tv_key_0:
+  alias: "Press 0"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "0"
+tv_key_1:
+  alias: "Press 1"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "1"
+tv_key_2:
+  alias: "Press 2"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "2"
+tv_key_3:
+  alias: "Press 3"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "3"
+tv_key_4:
+  alias: "Press 4"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "4"
+tv_key_5:
+  alias: "Press 5"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "5"
+tv_key_6:
+  alias: "Press 6"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "6"
+tv_key_7:
+  alias: "Press 7"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "7"
+tv_key_8:
+  alias: "Press 8"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "8"
+tv_key_9:
+  alias: "Press 9"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "9"
+tv_key_at:
+  alias: "Press at"
+  sequence:
+    - service: script.tv_character_keypress
+      data_template:
+        character: "@"
+tv_open_netflix:
+  alias: "Open Netflix"
+  sequence:
+    - service: media_player.select_source
+      data_template:
+        entity_id: >-
+          {{ states('sensor.controlled_tv_mp') }}
+        source: "Netflix"
