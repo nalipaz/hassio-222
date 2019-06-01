@@ -86,8 +86,6 @@
       event_data:
         action: call_service
   action:
-     - service: persistent_notification.create
+     - service: script.tv_character_keypress
        data_template:
-         message: '{{ trigger.event.data.text }}'
-         title: 'ifttt'
-         notification_id: 'ifttt'
+         character: '{{ trigger.event.data.text }}'
