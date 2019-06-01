@@ -63,12 +63,12 @@
     - platform: state
       entity_id:
         - switch.guest_bathroom_light
-        - switch.guest_bathroom_vanity_light_switch
+        - switch.guest_bathroom_vanity_light
       to: 'off'
     - platform: state
       entity_id:
         - switch.master_bathroom_light
-        - switch.master_bathroom_vanity_light_switch
+        - switch.master_bathroom_vanity_light
       to: 'off'
   action:
     - data_template:
