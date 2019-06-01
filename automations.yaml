@@ -88,6 +88,6 @@
   action:
      - service: persistent_notification.create
        data_template:
-         message: '{{ trigger.event.data.entity_id }}'
+         message: '{{ trigger.event.data }}'
          title: 'ifttt'
          notification_id: 'ifttt'
