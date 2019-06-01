@@ -1,3 +1,3 @@
-hello_world:
-  module: hello
-  class: HelloWorld
+roku_type:
+  module: rokutype
+  class: RokuType
