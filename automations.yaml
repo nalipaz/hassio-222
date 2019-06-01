@@ -76,3 +76,18 @@
           - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_light"
           - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_vanity_light"
       service: switch.turn_off
+
+- id: google-type
+  alias: "Google Type"
+  initial_state: 'on'
+  trigger:
+    - platform: event
+      event_type: ifttt_webhook_received
+      event_data:
+        action: call_service
+  action:
+     - service: persistent_notification.create
+       data_template:
+         message: '{{ trigger.event.data.entity_id }}'
+         title: 'ifttt'
+         notification_id: 'ifttt'
