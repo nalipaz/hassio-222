@@ -86,6 +86,6 @@
       event_data:
         action: call_service
   action:
-     - service: script.tv_character_keypress
-       data_template:
-         character: '{{ trigger.event.data.text }}'
+    - service: script.tv_character_keypress
+      data_template:
+        character: '{{ trigger.event.data.text }}'
