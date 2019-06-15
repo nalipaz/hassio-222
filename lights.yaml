@@ -1,3 +1,27 @@
 - platform: switch
+  name: Foyer Light
+  entity_id: switch.foyer
+- platform: switch
+  name: Office Closet Light
+  entity_id: switch.office_closet_light
+- platform: switch
+  name: Laundry Light
+  entity_id: switch.laundry_light
+- platform: switch
+  name: Bedroom Closet Light
+  entity_id: switch.bedroom_closet_light
+- platform: switch
+  name: Bathroom Light
+  entity_id: switch.master_bathroom_light
+- platform: switch
+  name: Bathroom Vanity Light
+  entity_id: switch.master_bathroom_vanity_light
+- platform: switch
+  name: Guest Bathroom Light
+  entity_id: switch.guest_bathroom_light
+- platform: switch
+  name: Guest Bathroom Vanity Light
+  entity_id: switch.guest_bathroom_vanity_light
+- platform: switch
   name: Kitchen Light
   entity_id: switch.kitchen_light
