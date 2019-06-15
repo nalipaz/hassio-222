@@ -77,3 +77,23 @@ sensor.master_bathroom_motion_detected:
   hidden: true
 sensor.guest_bathroom_motion_detected:
   hidden: true
+
+# Various switches to hide from the UI since we use light entities to make them operate as proper lights.
+switch.foyer:
+  hidden: true
+switch.office_closet_light:
+  hidden: true
+switch.laundry_light:
+  hidden: true
+switch.bedroom_closet_light:
+  hidden: true
+switch.master_bathroom_light:
+  hidden: true
+switch.master_bathroom_vanity_light:
+  hidden: true
+switch.guest_bathroom_light:
+  hidden: true
+switch.guest_bathroom_vanity_light:
+  hidden: true
+switch.kitchen_light:
+  hidden: true
