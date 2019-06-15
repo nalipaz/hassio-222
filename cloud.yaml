@@ -3,8 +3,17 @@ google_actions:
     exclude_entities:
       - media_player.bedroom_tv
       - media_player.living_room_tv
+      - switch.foyer
+      - switch.office_closet_light
+      - switch.laundry_light
+      - switch.bedroom_closet_light
+      - switch.master_bathroom_light
       - switch.master_bathroom_vanity_light_switch
+      - switch.master_bathroom_vanity_light
+      - switch.guest_bathroom_light
       - switch.guest_bathroom_vanity_light_switch
+      - switch.guest_bathroom_vanity_light
+      - switch.kitchen_light
       - script.tv_keypress
       - script.tv_power_state
       - group.all_automations
