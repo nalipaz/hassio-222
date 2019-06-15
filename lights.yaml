@@ -1,4 +1,3 @@
-light:
-  - platform: switch
-    name: Kitchen Light
-    entity_id: switch.kitchen_light
+- platform: switch
+  name: Kitchen Light
+  entity_id: switch.kitchen_light
