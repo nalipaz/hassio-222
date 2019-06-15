@@ -19,5 +19,4 @@ google_actions:
       - group.all_automations
       - group.all_remotes
       - group.all_scripts
-      - group.all_lights
       - group.all_switches
