@@ -23,3 +23,4 @@ cloud: !include cloud.yaml
 history:
 zwave: !include zwave.yaml
 shell_command: !include shell_commands.yaml
+light: !include lights.yaml
