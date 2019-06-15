@@ -13,8 +13,8 @@
   action:
     - data:
         entity_id:
-          - switch.bedroom_closet_light
-      service_template: "switch.turn_{% if (trigger.to_state.state == 'open') %}on{% elif (trigger.to_state.state == 'closed') %}off{% endif %}"
+          - light.bedroom_closet_light
+      service_template: "light.turn_{% if (trigger.to_state.state == 'open') %}on{% elif (trigger.to_state.state == 'closed') %}off{% endif %}"
 
 - id: bathroom-motion-detected
   alias: "Bathroom Motion Detected"
@@ -31,9 +31,9 @@
   action:
     - data_template:
         entity_id:
-          - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_vanity_light"
-          - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_light"
-      service: switch.turn_on
+          - "light.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_vanity_light"
+          - "light.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_light"
+      service: light.turn_on
 
 - id: bathroom-motion-stopped
   alias: "Bathroom Motion Stopped"
@@ -48,13 +48,13 @@
       entity_id:
         - sensor.guest_bathroom_motion_detected
       to: 'no'
-      for: '00:05:00'
+      for: '00:07:00'
   action:
     - data_template:
         entity_id:
-          - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_vanity_light"
-          - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_light"
-      service: switch.turn_off
+          - "light.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_vanity_light"
+          - "light.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_light"
+      service: light.turn_off
 
 - id: bathroom-switch-off
   alias: "Bathroom Switch Off"
@@ -62,20 +62,26 @@
   trigger:
     - platform: state
       entity_id:
-        - switch.guest_bathroom_light
-        - switch.guest_bathroom_vanity_light
+        - light.guest_bathroom_light
       to: 'off'
     - platform: state
       entity_id:
-        - switch.master_bathroom_light
-        - switch.master_bathroom_vanity_light
+        - light.guest_bathroom_vanity_light
+      to: 'off'
+    - platform: state
+      entity_id:
+        - light.master_bathroom_light
+      to: 'off'
+    - platform: state
+      entity_id:
+        - light.master_bathroom_vanity_light
       to: 'off'
   action:
     - data_template:
         entity_id:
-          - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_light"
-          - "switch.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_vanity_light"
-      service: switch.turn_off
+          - "light.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_light"
+          - "light.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_bathroom_vanity_light"
+      service: light.turn_off
 
 - id: google-type
   alias: "Google Type"
