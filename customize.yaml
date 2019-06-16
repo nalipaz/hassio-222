@@ -100,3 +100,5 @@ switch.kitchen_light:
 
 light.master_bathroom_light:
   friendly_name: Bathroom Light
+light.master_bathroom_light:
+  friendly_name: Bathroom Vanity Light
