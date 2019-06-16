@@ -62,6 +62,22 @@
   trigger:
     - platform: state
       entity_id:
+        - switch.guest_bathroom_light
+      to: 'off'
+    - platform: state
+      entity_id:
+        - switch.guest_bathroom_vanity_light
+      to: 'off'
+    - platform: state
+      entity_id:
+        - switch.master_bathroom_light
+      to: 'off'
+    - platform: state
+      entity_id:
+        - switch.master_bathroom_vanity_light
+      to: 'off'
+    - platform: state
+      entity_id:
         - light.guest_bathroom_light
       to: 'off'
     - platform: state
