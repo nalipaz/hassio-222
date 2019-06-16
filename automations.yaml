@@ -19,9 +19,9 @@
         - binary_sensor.office_closet_door
       to: 'off'
   action:
-    - data:
+    - data_template:
         entity_id:
-          - light.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_closet_light
+          - "light.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_closet_light"
       service_template: "light.turn_{{ trigger.to_state.state }}"
 
 - id: bathroom-motion-detected
