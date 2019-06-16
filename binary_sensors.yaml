@@ -3,8 +3,4 @@
     bedroom_closet_door:
       friendly_name: "Bedroom Closet Door"
       value_template: >-
-        {% if is_state('sensor.bedroom_closet_sensor_state', '22') %}
-          on
-        {% else %}
-          off
-        {% endif %}
+        {{ states.sensor.bedroom_closet_sensor_state.state == '23' }}
