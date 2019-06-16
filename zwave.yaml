@@ -1,4 +1,4 @@
-polling_interval: 10000
+polling_interval: 30000
 device_config:
   light.living_lamp: 
     polling_intensity: 1
@@ -24,3 +24,11 @@ device_config:
     polling_intensity: 1
     refresh_value: 2
     delay: 3
+  switch.master_bathroom_light:
+    polling_intensity: 1
+  switch.master_bathroom_vanity_light:
+    polling_intensity: 1
+  switch.guest_bathroom_light:
+    polling_intensity: 1
+  switch.guest_bathroom_vanity_light:
+    polling_intensity: 1
