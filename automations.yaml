@@ -24,6 +24,35 @@
           - "light.{{ trigger.entity_id.split('.')[1].split('_')[0] }}_closet_light"
       service_template: "light.turn_{{ trigger.to_state.state }}"
 
+- id: front-door-opened
+  alias: "Front Door Opened"
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id:
+        - binary_sensor.front_door
+      to: 'on'
+  action:
+    - data:
+        entity_id:
+          - light.foyer_light
+      service: light.turn_on
+- id: turn-off-foyer
+  alias: "Turn Off Foyer"
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id:
+        - binary_sensor.front_door
+      to: 'off'
+      for:
+        minutes: 3
+  action:
+    - data:
+        entity_id:
+          - light.foyer_light
+      service: light.turn_off
+
 - id: bathroom-motion-detected
   alias: "Bathroom Motion Detected"
   initial_state: 'on'
