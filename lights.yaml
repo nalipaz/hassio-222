@@ -14,7 +14,7 @@
   name: Master Bathroom Light
   entity_id: switch.master_bathroom_light
 - platform: switch
-  name: Bathroom Vanity Light
+  name: Master Bathroom Vanity Light
   entity_id: switch.master_bathroom_vanity_light
 - platform: switch
   name: Guest Bathroom Light
