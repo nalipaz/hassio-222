@@ -97,3 +97,6 @@ switch.guest_bathroom_vanity_light:
   hidden: true
 switch.kitchen_light:
   hidden: true
+
+light.master_bathroom_light:
+  friendly_name: Bathroom Light
