@@ -24,3 +24,4 @@ history:
 zwave: !include zwave.yaml
 shell_command: !include shell_commands.yaml
 light: !include lights.yaml
+binary_sensor: !include binary_sensors.yaml
