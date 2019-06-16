@@ -11,7 +11,7 @@
   name: Bedroom Closet Light
   entity_id: switch.bedroom_closet_light
 - platform: switch
-  name: Bathroom Light
+  name: Master Bathroom Light
   entity_id: switch.master_bathroom_light
 - platform: switch
   name: Bathroom Vanity Light
