@@ -3,4 +3,4 @@
     bedroom_closet_door:
       friendly_name: "Bedroom Closet Door"
       value_template: >-
-        {{ states.sensor.bedroom_closet_sensor_state.state == '23' }}
+        {{ states.sensor.bedroom_closet_sensor_state.state != '23' }}
