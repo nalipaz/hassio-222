@@ -3,6 +3,7 @@ google_actions:
     exclude_entities:
       - media_player.bedroom_tv
       - media_player.living_room_tv
+      - media_player.office_tv
       - switch.foyer
       - switch.office_closet_light
       - switch.laundry_light
