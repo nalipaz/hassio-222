@@ -15,10 +15,10 @@ sensor: !include sensors.yaml
 tts:
   - platform: google_translate
     service_name: google_say
-group: !include groups.yaml
+#group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
-switch: !include switches.yaml
+#switch: !include switches.yaml
 cloud: !include cloud.yaml
 history:
 zwave: !include zwave.yaml
